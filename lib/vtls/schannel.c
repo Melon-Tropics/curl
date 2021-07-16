@@ -372,23 +372,23 @@ get_cert_location(TCHAR *path, DWORD *store_name, TCHAR **store_path,
 
   store_name_len = sep - path;
 
-  if(_tcsnccmp(path, TEXT("CurrentUser"), store_name_len) == 0)
+  if(_tcsncmp(path, TEXT("CurrentUser"), store_name_len) == 0)
     *store_name = CERT_SYSTEM_STORE_CURRENT_USER;
-  else if(_tcsnccmp(path, TEXT("LocalMachine"), store_name_len) == 0)
+  else if(_tcsncmp(path, TEXT("LocalMachine"), store_name_len) == 0)
     *store_name = CERT_SYSTEM_STORE_LOCAL_MACHINE;
-  else if(_tcsnccmp(path, TEXT("CurrentService"), store_name_len) == 0)
+  else if(_tcsncmp(path, TEXT("CurrentService"), store_name_len) == 0)
     *store_name = CERT_SYSTEM_STORE_CURRENT_SERVICE;
-  else if(_tcsnccmp(path, TEXT("Services"), store_name_len) == 0)
+  else if(_tcsncmp(path, TEXT("Services"), store_name_len) == 0)
     *store_name = CERT_SYSTEM_STORE_SERVICES;
-  else if(_tcsnccmp(path, TEXT("Users"), store_name_len) == 0)
+  else if(_tcsncmp(path, TEXT("Users"), store_name_len) == 0)
     *store_name = CERT_SYSTEM_STORE_USERS;
-  else if(_tcsnccmp(path, TEXT("CurrentUserGroupPolicy"),
+  else if(_tcsncmp(path, TEXT("CurrentUserGroupPolicy"),
                     store_name_len) == 0)
     *store_name = CERT_SYSTEM_STORE_CURRENT_USER_GROUP_POLICY;
-  else if(_tcsnccmp(path, TEXT("LocalMachineGroupPolicy"),
+  else if(_tcsncmp(path, TEXT("LocalMachineGroupPolicy"),
                     store_name_len) == 0)
     *store_name = CERT_SYSTEM_STORE_LOCAL_MACHINE_GROUP_POLICY;
-  else if(_tcsnccmp(path, TEXT("LocalMachineEnterprise"),
+  else if(_tcsncmp(path, TEXT("LocalMachineEnterprise"),
                     store_name_len) == 0)
     *store_name = CERT_SYSTEM_STORE_LOCAL_MACHINE_ENTERPRISE;
   else
